@@ -11,8 +11,17 @@ module RunicLogs
   # Hook Rails init process
   class Railtie < Rails::Railtie
     initializer 'runic_logs' do |app|
+
       SessionRequestTagger.wrap(Rails.logger)
+
+      # Keep requests separated when deployed for sanity's sake
+      unless Rails.env.development?
+        ActiveSupport::Notifications.subscribe('process_action.action_controller') do |_|
+          Rails.logger.info "\n\n"
+        end
+      end
+
     end
   end
-
+  
 end
