@@ -1,4 +1,4 @@
-require "log_runes/cronolog"
+require "log_runes/logger_factory"
 require "log_runes/session_request_tagger"
 require "log_runes/version"
 
@@ -6,6 +6,10 @@ module LogRunes
   
   def self.tag
     SessionRequestTagger.proc
+  end
+  
+  def self.set_logger(config, opts={})
+    LoggerFactory.set(config, opts)
   end
   
   # Hook Rails init process
