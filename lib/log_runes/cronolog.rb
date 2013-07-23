@@ -1,4 +1,4 @@
-module RunicLogs
+module LogRunes
   class Cronolog
   
   def self.setup(config, log_base)

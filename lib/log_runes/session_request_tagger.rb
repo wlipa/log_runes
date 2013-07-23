@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module RunicLogs
+module LogRunes
 class SessionRequestTagger
   
   # These glyphs should be chosen to maximize visual distinctiveness

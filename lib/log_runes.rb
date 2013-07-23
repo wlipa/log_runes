@@ -1,8 +1,8 @@
-require "runic_logs/cronolog"
-require "runic_logs/session_request_tagger"
-require "runic_logs/version"
+require "log_runes/cronolog"
+require "log_runes/session_request_tagger"
+require "log_runes/version"
 
-module RunicLogs
+module LogRunes
   
   def self.tag
     SessionRequestTagger.proc
@@ -10,7 +10,7 @@ module RunicLogs
   
   # Hook Rails init process
   class Railtie < Rails::Railtie
-    initializer 'runic_logs' do |app|
+    initializer 'log_runes' do |app|
 
       SessionRequestTagger.wrap(Rails.logger)
 

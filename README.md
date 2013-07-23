@@ -1,6 +1,6 @@
-# Runic Logs
+# Log Runes
 
-Runic Logs adds unicode glyphs to the Rails logger output that encode the session and request id
+The Log Runes gem adds unicode glyphs to the Rails logger output that encode the session and request id
 in a way that occupies a minimum of visual space but provides very useful debugging capabilities.
 
 For example, it is easy to grep for a single session's log output, or the log output for a complete
@@ -15,7 +15,7 @@ column position in a visually clear way.
 
 Add this line to your application's Gemfile:
 
-    gem 'runic_logs'
+    gem 'log_runes'
 
 And then execute:
 
@@ -23,14 +23,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install runic_logs
+    $ gem install log_runes
     
 
 ## Usage
 
 Add the following setting to your config/application.rb file:
 
-    config.log_tags = [ RunicLogs.tag ]
+    config.log_tags = [ LogRunes.tag ]
 
 Your log output will look something like the following.
     

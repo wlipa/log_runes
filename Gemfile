@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in runic_logs.gemspec
+# Specify your gem's dependencies in log_runes.gemspec
 gemspec
