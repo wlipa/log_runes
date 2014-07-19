@@ -6,7 +6,7 @@ in a way that occupies a minimum of visual space but provides very useful debugg
 For example, it is easy to grep for a single session's log output, or the log output for a complete
 request, even if many requests are interleaved into the same log file.
 
-Beyond the debugging capabilities, Runic Logs tries to keep the log file output pleasant to work
+Beyond the debugging capabilities, LogRunes tries to keep the log file output pleasant to work
 with by only occupying 10 columns of text.  It uses unicode to encode a full byte of data into each
 column position in a visually clear way.
  

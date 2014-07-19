@@ -2,7 +2,7 @@
 
 module LogRunes
 class SessionRequestTagger
-  
+
   # These glyphs should be chosen to maximize visual distinctiveness
   # while being available in OSX terminal fonts.
   
@@ -42,7 +42,8 @@ class SessionRequestTagger
     Proc.new do |req|
       # Set the tag in the rack environment so it can be picked up by
       # tools like Airbrake.
-      req.env['request_tag'] = signature(req.cookies['_session_id'], req.uuid)
+      sess_id = req.cookies[Rails.application.config.session_options[:key]]
+      req.env['request_tag'] = signature(sess_id, req.uuid)
     end
   end
   

@@ -5,6 +5,7 @@ class LoggerFactory
   def self.set(config, opts)
 
     if Rails.env.development? || Rails.env.test?
+      # Use a stdout logger to avoid piling up a mostly useless giant log file
       config.logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
       return
     end
