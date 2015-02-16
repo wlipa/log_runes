@@ -1,3 +1,4 @@
+require "log_runes/custom_log_renamer"
 require "log_runes/logger_factory"
 require "log_runes/session_request_tagger"
 require "log_runes/version"
